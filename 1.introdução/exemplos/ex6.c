@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main (){
+    char ch;
+    
+    ch='D';
+    
+    printf ("%c",ch);
+    return(0);
+}
