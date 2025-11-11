@@ -15,8 +15,8 @@ int main(){
         for(j = 0; j < 6; j++){
             if(i % 2 ==0)
                 soma[i] += M[i][j];
-
         }
+        
         printf("media da linha %d: %.2f\n", i + 1, soma[i]/8);
     }
     return 0;
