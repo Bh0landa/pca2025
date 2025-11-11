@@ -1,22 +1,26 @@
 #include <stdio.h>
 
-int exp(int base, int expoente){
-    if(expoente == 0){
+int exp(int x, int y){
+    if(y == 0){
         return 1;
     }
     else{
-        return base * exp(base, expoente - 1);
+        return x * exp(x, y - 1);
     }
 }
 
 int main(){
-    int base, expoente;
-    printf("Digite a base: ");
-    scanf("%d", &base);
-    printf("Digite o expoente: ");
-    scanf("%d", &expoente);
+    int x, y;
+    printf("Digite a x: ");
+    scanf("%d", &x);
+    printf("Digite o y: ");
+    scanf("%d", &y);
+    if (y < 0){
+        printf("Expoente deve ser um numero inteiro nao negativo.\n");
+        return 1;
+    }
 
-    int resultado = exp(base, expoente);
-    printf("%d elevado a %d eh: %d\n", base, expoente, resultado);
+    int resultado = exp(x, y);
+    printf("%d elevado a %d eh: %d\n", x, y, resultado);
     return 0;
 }
