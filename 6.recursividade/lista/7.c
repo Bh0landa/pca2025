@@ -8,9 +8,8 @@ int perfeito(int n){
 		if(n % i == 0){
 			int outro = n / i;
 			soma += i;
-			if(outro != i){
+			if(outro != i)
                 soma += outro;
-			}
 		}
 	}
 
